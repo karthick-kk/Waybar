@@ -43,6 +43,8 @@
 #ifdef HAVE_NIRI
 #include "modules/niri/language.hpp"
 #include "modules/niri/window.hpp"
+#include "modules/niri/workspace_strip.hpp"
+#include "modules/niri/workspace_strip.hpp"
 #include "modules/niri/workspaces.hpp"
 #endif
 #ifdef HAVE_MANGO
@@ -267,6 +269,12 @@ waybar::AModule* waybar::Factory::makeModule(const std::string& name,
     }
     if (ref == "niri/workspaces") {
       return new waybar::modules::niri::Workspaces(id, bar_, config_[name]);
+    }
+    if (ref == "niri/workspace-strip") {
+      return new waybar::modules::niri::WorkspaceStrip(id, bar_, config_[name]);
+    }
+    if (ref == "niri/workspace-strip") {
+      return new waybar::modules::niri::WorkspaceStrip(id, bar_, config_[name]);
     }
 #endif
 #ifdef HAVE_MANGO

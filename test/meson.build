@@ -32,3 +32,4 @@ test(
 
 subdir('utils')
 subdir('hyprland')
+subdir('niri')
